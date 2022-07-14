@@ -1,0 +1,18 @@
+@import "_variables.scss";
+@import "_mixins.scss";  
+@import "_Bloglisting.scss";
+@import "Postdetails.scss";
+
+@font-face {
+    font-family: "SFProText";
+    src: url("@/assets/fonts/SF-Pro-Text-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SFPRODISPLAY";
+    src: url("@/assets/fonts/SFPRODISPLAYBOLD.OTF");
+    font-weight: bold;
+    font-style: normal;
+}

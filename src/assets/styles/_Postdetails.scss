@@ -1,0 +1,173 @@
+#post {
+    width: auto;
+    margin-top: 50px;
+    @include flexCenter(column);
+
+    div {
+        width: 100%;
+    }
+
+    p {
+        text-align: justify;
+        color: $textColor;
+
+        strong {
+            color: $headingColor;
+        }
+    }
+
+    h2 {
+        font-family: "SFPRODISPLAY";
+        font-weight: xxl;
+        font-size: 36px;
+        margin: 0px;
+        text-align: left;
+        line-height: -1;
+        color: $headingColor;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+#more-articles {
+    @include flexCenter(column);
+    padding-bottom: 100px;
+
+    div {
+
+        h2 {
+            font-family: "SFPRODISPLAY";
+            font-weight: xxl;
+            font-size: 36px;
+            margin-top: 50px;
+            margin-bottom: 0px;
+            color: $headingColor;
+        }
+    }
+
+    .card {
+        cursor: pointer;
+        width: auto;
+        margin-top: 50px;
+        padding: 10px;
+        border: 1px solid rgb(225, 224, 224);
+        border-radius: 5px;
+        @include flexCenter(column);
+        @extend %hoverEffect;
+        flex-wrap: wrap;
+        line-height: -1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #6e6e6e;
+        }
+
+        .card__description {
+
+            h3 {
+                margin: 0px;
+                color: $headingColor;
+                font-weight: 900;
+                font-size: 1.5rem;
+            }
+        }
+
+        .card__detail {
+            width: 100%;
+            @include flexCenter(row);
+            justify-content: space-between;
+
+            p {
+                margin: 0px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $linkColor;
+                font-size: 0.9rem;
+                font-weight: 600;
+
+                svg {
+                    fill: $linkColor;
+                    width: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+/******************* Media Queries begins here **********************/
+
+
+@media (max-width: 799px) {
+
+    #post {
+        padding-top: 50px;
+        margin: auto;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    #more-articles {
+        width: auto;
+        @include flexCenter(column);
+
+        div > .card {
+            width: 300px;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+
+    #post {
+        padding-top: 50px;
+        width: 800px;
+        margin: auto;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: -1;
+
+        img {
+            width: 500px;
+            object-fit: cover;
+            height: auto;
+        }
+    }
+
+    #more-articles {
+        width: 100%;
+        @include flexCenter(column);
+
+        div {
+            width: 100%;
+
+            h2 {
+                text-align: left;
+            }
+        }
+
+        .more {
+            width: 100%;
+            @include flexCenter(row);
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .card {
+                width: 250px;
+            }
+        }
+    }
+}
+
+
+/******************* Media Queries ends here **********************/

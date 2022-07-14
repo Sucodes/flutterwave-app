@@ -1,0 +1,16 @@
+/************** Variables**********************/
+
+$iconColor: #4B4B4B;
+$linkColor: #1473E6;
+$headingColor: #2C2C2C;
+$textColor: #6E6E6E;
+$white: #fff;
+$black: #000;
+
+%hoverEffect {
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 1.5s;  
+  }
+}
